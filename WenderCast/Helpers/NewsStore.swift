@@ -55,20 +55,20 @@ extension NewsStore {
       let data = try JSONEncoder().encode(items)
       try data.write(to: itemsCache)
     } catch {
-      print("Error saving news items: \(error)")
+      debug("ERROR saving news items: \(error)")
     }
   }
 
   func loadItemsFromCache() {
     do {
       guard FileManager.default.fileExists(atPath: itemsCache.path) else {
-        print("No news file exists yet.")
+        debug("No news file exists yet.")
         return
       }
       let data = try Data(contentsOf: itemsCache)
       items = try JSONDecoder().decode([NewsItem].self, from: data)
     } catch {
-      print("Error loading news items: \(error)")
+      debug("ERROR loading news items: \(error)")
     }
   }
 

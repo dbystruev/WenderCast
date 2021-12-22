@@ -62,20 +62,20 @@ extension PodcastStore {
       let data = try JSONEncoder().encode(items)
       try data.write(to: itemsCache)
     } catch {
-      print("Error saving podcast items: \(error)")
+      debug("ERROR saving podcast items: \(error)")
     }
   }
 
   func loadItemsFromCache() {
     do {
       guard FileManager.default.fileExists(atPath: itemsCache.path) else {
-        print("No podcast file exists yet.")
+        debug("No podcast file exists yet.")
         return
       }
       let data = try Data(contentsOf: itemsCache)
       items = try JSONDecoder().decode([PodcastItem].self, from: data)
     } catch {
-      print("Error loading podcast items: \(error)")
+      debug("ERROR loading podcast items: \(error)")
     }
   }
 

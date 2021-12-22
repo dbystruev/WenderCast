@@ -18,10 +18,9 @@ extension AppDelegate {
       // REquest authorization to show notifications
       .requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
         if granted {
-          print(#line, "INFO: push notifications authorization granted")
+          debug("INFO: push notifications authorization granted")
         } else {
-          let errorMessage = error?.localizedDescription ?? ""
-          print(#line, "ERROR: no push notifications authorization granted \(errorMessage)")
+          debug("ERROR: no push notifications authorization granted", error?.localizedDescription)
         }
       }
   }

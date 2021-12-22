@@ -52,7 +52,7 @@ class PodcastFeedTableViewController: UITableViewController {
     }
 
     if podcastStore.items.isEmpty {
-      print("Loading podcast feed for the first time")
+      debug("Loading podcast feed for the first time")
       podcastStore.refreshItems { didLoadNewItems in
         if didLoadNewItems {
           DispatchQueue.main.async {
