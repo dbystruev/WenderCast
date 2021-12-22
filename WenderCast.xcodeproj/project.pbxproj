@@ -25,6 +25,7 @@
 		4DFFBA911BFAD24100A24C84 /* PodcastFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */; };
 		4DFFBA931BFAD28600A24C84 /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA921BFAD28600A24C84 /* NewsStore.swift */; };
 		690A8C4E276C829D000D1CB2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 690A8C4D276C829C000D1CB2 /* README.md */; };
+		6979D08527734B0E00034721 /* AppDelegate+PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,8 @@
 		4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastFeedLoader.swift; sourceTree = "<group>"; };
 		4DFFBA921BFAD28600A24C84 /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; tabWidth = 2; };
 		690A8C4D276C829C000D1CB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6979D0822773497100034721 /* WenderCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WenderCast.entitlements; sourceTree = "<group>"; };
+		6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+PushNotifications.swift"; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +99,8 @@
 		4DFFBA711BFACF0700A24C84 /* WenderCast */ = {
 			isa = PBXGroup;
 			children = (
-				4DFFBA721BFACF0700A24C84 /* AppDelegate.swift */,
+				6979D0822773497100034721 /* WenderCast.entitlements */,
+				6979D08327734AE500034721 /* AppDelegate */,
 				4DFFBA761BFACF0700A24C84 /* Main.storyboard */,
 				4DFFBA8A1BFAD1D400A24C84 /* Models */,
 				4DFFBA8B1BFAD1D400A24C84 /* Views */,
@@ -146,6 +150,15 @@
 				4D3334741C02DDD800EEB039 /* NewsItemCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6979D08327734AE500034721 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				4DFFBA721BFACF0700A24C84 /* AppDelegate.swift */,
+				6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +277,7 @@
 				4DBF129A1C010AB00020F03C /* PodcastFeedTableViewController.swift in Sources */,
 				4DBF12A01C010CA20020F03C /* DateParser.swift in Sources */,
 				4DAE59F11C02D925002EED61 /* NewsItem.swift in Sources */,
+				6979D08527734B0E00034721 /* AppDelegate+PushNotifications.swift in Sources */,
 				4DFFBA731BFACF0700A24C84 /* AppDelegate.swift in Sources */,
 				4DBF12A21C0119940020F03C /* PodcastItemCell.swift in Sources */,
 			);
@@ -395,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WenderCast/WenderCast.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8J39KF9DMS;
@@ -414,6 +429,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = WenderCast/WenderCast.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8J39KF9DMS;

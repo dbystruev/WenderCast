@@ -48,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     UITabBar.appearance().barTintColor = UIColor.themeGreenColor
     UITabBar.appearance().tintColor = UIColor.white
+    
+    // Request permission to send push notifications
+    registerForPushNotifications()
 
     return true
   }
