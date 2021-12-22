@@ -9,12 +9,20 @@
 //
 
 import UserNotifications
+import UIKit
 
 extension AppDelegate {
   /// Get push notification settings
   func getNotificationSettings() {
     UNUserNotificationCenter.current().getNotificationSettings { settings in
-      debug("INFO Notification settings:", settings)
+      let authorizationStatus = settings.authorizationStatus
+      guard authorizationStatus == .authorized else {
+        debug("ERROR: no push notifications authorization granted, status: \(authorizationStatus)")
+        return
+      }
+      DispatchQueue.main.async {
+        UIApplication.shared.registerForRemoteNotifications()
+      }
     }
   }
   
@@ -23,12 +31,8 @@ extension AppDelegate {
     // UNUserNotificationCenter handles all notification-related activities in the app
     UNUserNotificationCenter.current()
       // REquest authorization to show notifications
-      .requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] granted, error in
-        // Check if permission is granted
-        if !granted {
-          let errorMessage = error?.localizedDescription ?? ""
-          debug("ERROR: no push notifications authorization granted", errorMessage)
-        }
+      .requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] _, _ in
+        // Print information on whether permission is granted
         self?.getNotificationSettings()
       }
   }

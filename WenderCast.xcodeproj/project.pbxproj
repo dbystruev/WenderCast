@@ -30,6 +30,7 @@
 		6979D08927734FC000034721 /* StandardErrorOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08827734FC000034721 /* StandardErrorOutputStream.swift */; };
 		6979D08C2773538300034721 /* StringProtocol+lastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */; };
 		6979D08E277353E500034721 /* StringProtocol+dropExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */; };
+		6979D0902773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		6979D08827734FC000034721 /* StandardErrorOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardErrorOutputStream.swift; sourceTree = "<group>"; };
 		6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+lastComponent.swift"; sourceTree = "<group>"; };
 		6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+dropExtension.swift"; sourceTree = "<group>"; };
+		6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNAuthorizationStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,10 +139,10 @@
 				4DFFBA921BFAD28600A24C84 /* NewsStore.swift */,
 				4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */,
 				4DBF129D1C010B670020F03C /* PodcastStore.swift */,
+				6979D08827734FC000034721 /* StandardErrorOutputStream.swift */,
 				4DFFBA891BFAD1D400A24C84 /* SWXMLHash.swift */,
 				4D67221E1C37691500E08100 /* Theme.swift */,
 				958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */,
-				6979D08827734FC000034721 /* StandardErrorOutputStream.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -177,6 +179,7 @@
 			children = (
 				6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */,
 				6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */,
+				6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				4D3334751C02DDD800EEB039 /* NewsItemCell.swift in Sources */,
 				4DFFBA8D1BFAD1D400A24C84 /* SWXMLHash.swift in Sources */,
 				4DBF129E1C010B670020F03C /* PodcastStore.swift in Sources */,
+				6979D0902773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift in Sources */,
 				6979D08C2773538300034721 /* StringProtocol+lastComponent.swift in Sources */,
 				4D67221F1C37691500E08100 /* Theme.swift in Sources */,
 				4DFFBA931BFAD28600A24C84 /* NewsStore.swift in Sources */,

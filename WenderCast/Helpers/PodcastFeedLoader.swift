@@ -59,6 +59,10 @@ enum PodcastFeedLoader {
 
         return nil
       }
+      
+      if feedItems.isEmpty {
+        debug("ERROR parsing \(feedURL):", String(data: data, encoding: .utf8))
+      }
 
       completion(feedItems)
     }

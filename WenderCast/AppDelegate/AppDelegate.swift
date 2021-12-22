@@ -54,4 +54,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     return true
   }
+  
+  func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+    let token = tokenParts.joined()
+    debug("INFO Device Token: \(token)")
+  }
+  
+  func application(
+    _ application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: Error
+  ) {
+    debug("ERROR Failed to register: \(error)")
+  }
 }
