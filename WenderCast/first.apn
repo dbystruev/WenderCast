@@ -1,0 +1,7 @@
+{
+  "aps": {
+    "alert": "Happy New Year!",
+    "sound": "default",
+    "link_url": "https://github.com/dbystruev"
+  }
+}

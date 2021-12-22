@@ -31,6 +31,7 @@
 		6979D08C2773538300034721 /* StringProtocol+lastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */; };
 		6979D08E277353E500034721 /* StringProtocol+dropExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */; };
 		6979D0902773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */; };
+		6979D09327735E2F00034721 /* first.apn in Resources */ = {isa = PBXBuildFile; fileRef = 6979D09227735E2F00034721 /* first.apn */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+lastComponent.swift"; sourceTree = "<group>"; };
 		6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+dropExtension.swift"; sourceTree = "<group>"; };
 		6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNAuthorizationStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
+		6979D09227735E2F00034721 /* first.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = first.apn; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		4D5A5BBE1C2917FA00B8386B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6979D09127735DFC00034721 /* Notifications */,
 				4DFFBA791BFACF0700A24C84 /* Assets.xcassets */,
 				18C4956421B492DA00ACD57D /* LaunchScreen.storyboard */,
 				4DFFBA7E1BFACF0700A24C84 /* Info.plist */,
@@ -184,6 +187,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		6979D09127735DFC00034721 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				6979D09227735E2F00034721 /* first.apn */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -256,6 +267,7 @@
 				18C4956521B492DA00ACD57D /* LaunchScreen.storyboard in Resources */,
 				690A8C4E276C829D000D1CB2 /* README.md in Resources */,
 				4DFFBA781BFACF0700A24C84 /* Main.storyboard in Resources */,
+				6979D09327735E2F00034721 /* first.apn in Resources */,
 				4D5A5BC01C29187400B8386B /* AssetAttributions.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
