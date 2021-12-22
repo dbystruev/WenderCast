@@ -24,6 +24,7 @@
 		4DFFBA8F1BFAD20C00A24C84 /* PodcastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA8E1BFAD20C00A24C84 /* PodcastItem.swift */; };
 		4DFFBA911BFAD24100A24C84 /* PodcastFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */; };
 		4DFFBA931BFAD28600A24C84 /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA921BFAD28600A24C84 /* NewsStore.swift */; };
+		690A8C4E276C829D000D1CB2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 690A8C4D276C829C000D1CB2 /* README.md */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		4DFFBA8E1BFAD20C00A24C84 /* PodcastItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastItem.swift; sourceTree = "<group>"; };
 		4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastFeedLoader.swift; sourceTree = "<group>"; };
 		4DFFBA921BFAD28600A24C84 /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; tabWidth = 2; };
+		690A8C4D276C829C000D1CB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 		4DFFBA661BFACF0700A24C84 = {
 			isa = PBXGroup;
 			children = (
+				690A8C4D276C829C000D1CB2 /* README.md */,
 				4DFFBA711BFACF0700A24C84 /* WenderCast */,
 				4DFFBA701BFACF0700A24C84 /* Products */,
 			);
@@ -215,6 +218,7 @@
 			files = (
 				4DFFBA7A1BFACF0700A24C84 /* Assets.xcassets in Resources */,
 				18C4956521B492DA00ACD57D /* LaunchScreen.storyboard in Resources */,
+				690A8C4E276C829D000D1CB2 /* README.md in Resources */,
 				4DFFBA781BFACF0700A24C84 /* Main.storyboard in Resources */,
 				4D5A5BC01C29187400B8386B /* AssetAttributions.txt in Resources */,
 			);
@@ -327,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -378,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -393,11 +397,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = WenderCast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.WenderCast;
+				PRODUCT_BUNDLE_IDENTIFIER = co.getoutfit.raywenderlich.WenderCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -412,11 +416,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8J39KF9DMS;
 				INFOPLIST_FILE = WenderCast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raywenderlich.WenderCast;
+				PRODUCT_BUNDLE_IDENTIFIER = co.getoutfit.raywenderlich.WenderCast;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
