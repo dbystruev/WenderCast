@@ -20,7 +20,8 @@ extension AppDelegate {
         if granted {
           debug("INFO: push notifications authorization granted")
         } else {
-          debug("ERROR: no push notifications authorization granted", error?.localizedDescription)
+          let errorMessage = error?.localizedDescription ?? ""
+          debug("ERROR: no push notifications authorization granted", errorMessage)
         }
       }
   }
