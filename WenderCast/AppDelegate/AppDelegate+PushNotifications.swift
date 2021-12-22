@@ -11,18 +11,25 @@
 import UserNotifications
 
 extension AppDelegate {
+  /// Get push notification settings
+  func getNotificationSettings() {
+    UNUserNotificationCenter.current().getNotificationSettings { settings in
+      debug("INFO Notification settings:", settings)
+    }
+  }
+  
   /// Register for push notifications
   func registerForPushNotifications() {
     // UNUserNotificationCenter handles all notification-related activities in the app
     UNUserNotificationCenter.current()
       // REquest authorization to show notifications
-      .requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
-        if granted {
-          debug("INFO: push notifications authorization granted")
-        } else {
+      .requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] granted, error in
+        // Check if permission is granted
+        if !granted {
           let errorMessage = error?.localizedDescription ?? ""
           debug("ERROR: no push notifications authorization granted", errorMessage)
         }
+        self?.getNotificationSettings()
       }
   }
 }
