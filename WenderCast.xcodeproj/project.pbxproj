@@ -32,6 +32,7 @@
 		6979D08E277353E500034721 /* StringProtocol+dropExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */; };
 		6979D0902773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */; };
 		6979D09327735E2F00034721 /* first.apn in Resources */ = {isa = PBXBuildFile; fileRef = 6979D09227735E2F00034721 /* first.apn */; };
+		69A382F6277482A7004129B1 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 69A382F5277482A7004129B1 /* notification.png */; };
 		958AD3C62158BA76000C57A4 /* WenderSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		6979D08D277353E500034721 /* StringProtocol+dropExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+dropExtension.swift"; sourceTree = "<group>"; };
 		6979D08F2773576C00034721 /* UNAuthorizationStatus+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UNAuthorizationStatus+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		6979D09227735E2F00034721 /* first.apn */ = {isa = PBXFileReference; lastKnownFileType = text; path = first.apn; sourceTree = "<group>"; };
+		69A382F5277482A7004129B1 /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification.png; sourceTree = "<group>"; };
 		958AD3C52158BA76000C57A4 /* WenderSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WenderSafariViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				6979D09227735E2F00034721 /* first.apn */,
+				69A382F5277482A7004129B1 /* notification.png */,
 			);
 			name = Notifications;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A382F6277482A7004129B1 /* notification.png in Resources */,
 				4DFFBA7A1BFACF0700A24C84 /* Assets.xcassets in Resources */,
 				18C4956521B492DA00ACD57D /* LaunchScreen.storyboard in Resources */,
 				690A8C4E276C829D000D1CB2 /* README.md in Resources */,
