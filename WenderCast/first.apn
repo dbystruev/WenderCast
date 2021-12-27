@@ -2,6 +2,7 @@
   "aps": {
     "alert": "Happy New Year!",
     "sound": "default",
-    "link_url": "https://github.com/dbystruev"
+    "link_url": "https://github.com/dbystruev",
+    "category": "NEWS_CATEGORY"
   }
 }

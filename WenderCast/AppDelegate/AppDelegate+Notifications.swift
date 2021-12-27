@@ -12,6 +12,34 @@ import UserNotifications
 import UIKit
 
 extension AppDelegate {
+  func application(
+    _ application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: Error
+  ) {
+    debug("ERROR Failed to register: \(error)")
+  }
+  
+  func application(
+    _ application: UIApplication,
+    didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+    fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+  ) {
+    guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+      completionHandler(.failed)
+      return
+    }
+    NewsItem.makeNewsItem(aps)
+  }
+  
+  func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+    let token = tokenParts.joined()
+    debug("INFO Device Token: \(token)")
+  }
+  
   /// Get push notification settings
   func getNotificationSettings() {
     UNUserNotificationCenter.current().getNotificationSettings { settings in
@@ -31,37 +59,32 @@ extension AppDelegate {
     // UNUserNotificationCenter handles all notification-related activities in the app
     UNUserNotificationCenter.current()
       // REquest authorization to show notifications
-      .requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] _, _ in
+      .requestAuthorization(options: [.alert, .badge, .sound]) { [weak self] granted, _ in
+        guard granted else {
+          debug("INFO: Permission was not granted")
+          return
+        }
+        
+        // Create a new notification action
+        let viewAction = UNNotificationAction(
+          identifier: Identifiers.viewAction,
+          title: "View",
+          options: [.foreground]
+        )
+        
+        // Define the new category, which will contain the view action
+        let newsCategory = UNNotificationCategory(
+          identifier: Identifiers.newsCategory,
+          actions: [viewAction],
+          intentIdentifiers: [],
+          options: []
+        )
+        
+        // Register the actionable notification
+        UNUserNotificationCenter.current().setNotificationCategories([newsCategory])
+        
         // Print information on whether permission is granted
         self?.getNotificationSettings()
       }
-  }
-  
-  func application(
-    _ application: UIApplication,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-  ) {
-    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-    let token = tokenParts.joined()
-    debug("INFO Device Token: \(token)")
-  }
-  
-  func application(
-    _ application: UIApplication,
-    didFailToRegisterForRemoteNotificationsWithError error: Error
-  ) {
-    debug("ERROR Failed to register: \(error)")
-  }
-  
-  func application(
-    _ application: UIApplication,
-    didReceiveRemoteNotification userInfo: [AnyHashable : Any],
-    fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
-  ) {
-    guard let aps = userInfo["aps"] as? [String: AnyObject] else {
-      completionHandler(.failed)
-      return
-    }
-    NewsItem.makeNewsItem(aps)
   }
 }
