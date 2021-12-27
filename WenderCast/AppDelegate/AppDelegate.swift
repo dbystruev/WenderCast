@@ -49,6 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBar.appearance().barTintColor = UIColor.themeGreenColor
     UITabBar.appearance().tintColor = UIColor.white
     
+    // Set self as delegate for notification center
+    UNUserNotificationCenter.current().delegate = self
+    
     // Check if launched from notification
     let notificationOption = launchOptions?[.remoteNotification]
     

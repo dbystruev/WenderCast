@@ -10,6 +10,7 @@
 
 import UserNotifications
 import UIKit
+import SafariServices
 
 extension AppDelegate {
   func application(
@@ -86,5 +87,37 @@ extension AppDelegate {
         // Print information on whether permission is granted
         self?.getNotificationSettings()
       }
+  }
+}
+
+// MARK: - UNUserNotificationCenterDelegate
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    didReceive response: UNNotificationResponse,
+    withCompletionHandler completionHandler: @escaping () -> Void
+  ) {
+    // Get the user info dictionary
+    let userInfo = response.notification.request.content.userInfo
+    
+    // Create a news item and navigate to the news tab
+    if
+      let aps = userInfo["aps"] as? [String: AnyObject],
+      let newsItem = NewsItem.makeNewsItem(aps)
+    {
+      (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+      
+      // Display the link in Safari view controller
+      if
+        response.actionIdentifier == Identifiers.viewAction,
+        let url = URL(string: newsItem.link)
+      {
+        let safari = SFSafariViewController(url: url)
+        window?.rootViewController?.present(safari, animated: true)
+      }
+    }
+    
+    // Call the completion handle the system has passed
+    completionHandler()
   }
 }
