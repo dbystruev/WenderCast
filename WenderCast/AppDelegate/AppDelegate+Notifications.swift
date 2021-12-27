@@ -29,7 +29,21 @@ extension AppDelegate {
       completionHandler(.failed)
       return
     }
-    NewsItem.makeNewsItem(aps)
+    
+    // Check if content-available is set to 1 (silent notification)
+    if aps["content-available"] as? Int == 1 {
+      let podcastStore = PodcastStore.sharedStore
+      
+      // Refresh the podcast list
+      podcastStore.refreshItems { didLoadNewItems in
+        // When refresh is complete, let the system know whether new data were loaded
+        completionHandler(didLoadNewItems ? .newData : .noData)
+      }
+    } else {
+      // This is not a silent notification — make a news item
+      NewsItem.makeNewsItem(aps)
+      completionHandler(.newData)
+    }
   }
   
   func application(
