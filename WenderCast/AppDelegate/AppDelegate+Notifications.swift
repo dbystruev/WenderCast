@@ -52,4 +52,16 @@ extension AppDelegate {
   ) {
     debug("ERROR Failed to register: \(error)")
   }
+  
+  func application(
+    _ application: UIApplication,
+    didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+    fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+  ) {
+    guard let aps = userInfo["aps"] as? [String: AnyObject] else {
+      completionHandler(.failed)
+      return
+    }
+    NewsItem.makeNewsItem(aps)
+  }
 }
