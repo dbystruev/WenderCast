@@ -25,7 +25,7 @@
 		4DFFBA911BFAD24100A24C84 /* PodcastFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA901BFAD24100A24C84 /* PodcastFeedLoader.swift */; };
 		4DFFBA931BFAD28600A24C84 /* NewsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFFBA921BFAD28600A24C84 /* NewsStore.swift */; };
 		690A8C4E276C829D000D1CB2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 690A8C4D276C829C000D1CB2 /* README.md */; };
-		6979D08527734B0E00034721 /* AppDelegate+PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */; };
+		6979D08527734B0E00034721 /* AppDelegate+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08427734B0E00034721 /* AppDelegate+Notifications.swift */; };
 		6979D08727734F7000034721 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08627734F7000034721 /* debug.swift */; };
 		6979D08927734FC000034721 /* StandardErrorOutputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08827734FC000034721 /* StandardErrorOutputStream.swift */; };
 		6979D08C2773538300034721 /* StringProtocol+lastComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */; };
@@ -58,7 +58,7 @@
 		4DFFBA921BFAD28600A24C84 /* NewsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = NewsStore.swift; sourceTree = "<group>"; tabWidth = 2; };
 		690A8C4D276C829C000D1CB2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6979D0822773497100034721 /* WenderCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WenderCast.entitlements; sourceTree = "<group>"; };
-		6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+PushNotifications.swift"; sourceTree = "<group>"; };
+		6979D08427734B0E00034721 /* AppDelegate+Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Notifications.swift"; sourceTree = "<group>"; };
 		6979D08627734F7000034721 /* debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 		6979D08827734FC000034721 /* StandardErrorOutputStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardErrorOutputStream.swift; sourceTree = "<group>"; };
 		6979D08B2773538300034721 /* StringProtocol+lastComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+lastComponent.swift"; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				4DFFBA721BFACF0700A24C84 /* AppDelegate.swift */,
-				6979D08427734B0E00034721 /* AppDelegate+PushNotifications.swift */,
+				6979D08427734B0E00034721 /* AppDelegate+Notifications.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 				6979D08E277353E500034721 /* StringProtocol+dropExtension.swift in Sources */,
 				4DBF12A01C010CA20020F03C /* DateParser.swift in Sources */,
 				4DAE59F11C02D925002EED61 /* NewsItem.swift in Sources */,
-				6979D08527734B0E00034721 /* AppDelegate+PushNotifications.swift in Sources */,
+				6979D08527734B0E00034721 /* AppDelegate+Notifications.swift in Sources */,
 				6979D08727734F7000034721 /* debug.swift in Sources */,
 				4DFFBA731BFACF0700A24C84 /* AppDelegate.swift in Sources */,
 				4DBF12A21C0119940020F03C /* PodcastItemCell.swift in Sources */,

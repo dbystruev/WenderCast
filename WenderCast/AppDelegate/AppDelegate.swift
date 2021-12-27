@@ -49,25 +49,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     UITabBar.appearance().barTintColor = UIColor.themeGreenColor
     UITabBar.appearance().tintColor = UIColor.white
     
+    // Check if launched from notification
+    let notificationOption = launchOptions?[.remoteNotification]
+    
+    // Get the push notification payload
+    if
+      let notification = notificationOption as? [String: AnyObject],
+      let aps = notification["aps"] as? [String: AnyObject] {
+      
+      // Create a news item with aps dictionary
+      NewsItem.makeNewsItem(aps)
+      
+      // Change the selected tab of the tab controller to the News section
+      (window?.rootViewController as? UITabBarController)?.selectedIndex = 1
+    }
+    
     // Request permission to send push notifications
     registerForPushNotifications()
 
     return true
-  }
-  
-  func application(
-    _ application: UIApplication,
-    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-  ) {
-    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-    let token = tokenParts.joined()
-    debug("INFO Device Token: \(token)")
-  }
-  
-  func application(
-    _ application: UIApplication,
-    didFailToRegisterForRemoteNotificationsWithError error: Error
-  ) {
-    debug("ERROR Failed to register: \(error)")
   }
 }

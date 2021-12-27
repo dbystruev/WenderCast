@@ -1,5 +1,5 @@
 //
-//  AppDelegate+PushNotifications.swift
+//  AppDelegate+Notifications.swift
 //  WenderCast
 //
 //  Created by Denis Bystruev on 22.12.2021.
@@ -35,5 +35,21 @@ extension AppDelegate {
         // Print information on whether permission is granted
         self?.getNotificationSettings()
       }
+  }
+  
+  func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+    let token = tokenParts.joined()
+    debug("INFO Device Token: \(token)")
+  }
+  
+  func application(
+    _ application: UIApplication,
+    didFailToRegisterForRemoteNotificationsWithError error: Error
+  ) {
+    debug("ERROR Failed to register: \(error)")
   }
 }
